@@ -1,39 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
+import SearchIcon from 'react-icons/lib/fa/search';
 import { Button } from './common';
+import '../index.css'
  
-class SearchForm extends Component{
-    constructor(props){
-        super(props);
-        this.state = { search: '' };
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleSubmit(e) {
-        console.log(this.state.search);
-        e.preventDefault();
-    }
-
-    handleChange(e) {
-        this.setState({search: e.target.value});
-    }
-
-    render() {
-        return(
-            <form onSubmit={this.handleSubmit}>
-                <input 
-                    type="text" 
-                    placeholder="Search anything on wikipedia" 
-                    size="100" 
-                    value={this.state.search} 
-                    onChange={this.handleChange}
-                />
+const SearchForm = (props) => {
+    return(
+        <div className="searchForm">
+            <form onSubmit={props.onSubmit}>
+                <div className="inputContainer">
+                    <SearchIcon />
+                    <input 
+                        className="inputForm"
+                        type="text" 
+                        placeholder="Search anything on wikipedia" 
+                        value={props.search} 
+                        onChange={props.onChange}
+                    />
+                </div>
                 <input type="submit" value="Search"/>
-                <Button>Random</Button>
+                <Button>
+                    <a href="https://en.wikipedia.org/wiki/Special:Random" target='_blank'>
+                        Random
+                    </a>
+                </Button>
             </form>
+        </div>
         );
-    }
 };
 
 export default SearchForm;

@@ -2,4 +2,39 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #214e96;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("http://bestfons.ru/_ph/24/985579237.jpg");
+}
+
+.searchForm{
+  padding: 20px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.inputContainer{
+  display: inline;
+}
+
+.inputForm{
+  width: 200%;
+  padding: 12px;
+  margin-bottom: 5px;
+  border: 0.5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px black;
+  font-size: 16px;
+  text-indent: 25px;
+}
+
+searchIcon{
+  padding-left: 12px;
+  padding-top: 12px;
+  position: absolute;
+  font-size: 20px;
+  color: lightgray;
 }
