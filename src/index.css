@@ -2,10 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #214e96;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-image: url("http://bestfons.ru/_ph/24/985579237.jpg");
+  background-image: url("https://static.pexels.com/photos/117482/pexels-photo-117482.jpeg");
+  background-size: cover;
 }
 
 .searchForm{
@@ -16,11 +16,11 @@ body {
 }
 
 .inputContainer{
-  display: inline;
+  display: inline-block;
 }
 
 .inputForm{
-  width: 200%;
+  width: 300%;
   padding: 12px;
   margin-bottom: 5px;
   border: 0.5px solid black;
@@ -28,13 +28,49 @@ body {
   border-radius: 5px;
   box-shadow: 3px 3px 10px black;
   font-size: 16px;
+}
+
+.inputForm:focus{
   text-indent: 25px;
 }
 
-searchIcon{
+.inputForm:focus ~ .angleRight{
+  visibility: visible;
+}
+
+.angleRight{
   padding-left: 12px;
   padding-top: 12px;
   position: absolute;
   font-size: 20px;
-  color: lightgray;
+  color: gray;
+  visibility: hidden;
+}
+
+.searchButton{
+  position: absolute;
+  top: 30%;
+  right: -137%;
+  background-color: white;
+  font-size: 20px;
+  border: none;
+  color: black;
+  padding: 0;
+}
+
+.randomButton{
+  position: absolute;
+  top: 32%;
+  right: -151%;
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+}
+
+.randomButton a {
+  color: black;
+  text-decoration: none;
 }

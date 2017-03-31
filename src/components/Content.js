@@ -40,7 +40,12 @@ class Content extends Component {
         return(
             <div>
                 {this.handleError()}
-                <SearchForm onSubmit={this.handleSubmit} value={this.state.search} onChange={this.handleChange} />
+                <SearchForm 
+                    onSubmit={this.handleSubmit} 
+                    value={this.state.search} 
+                    onChange={this.handleChange} 
+                    wikis={this.state.wiki} 
+                />
                 <ResultsList wikis={this.state.wiki} />
             </div>
         );

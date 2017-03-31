@@ -17,7 +17,7 @@ class ResultsList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="wikiContainer">
                 {this.renderWiki()}
             </div>
         );
