@@ -7,19 +7,18 @@ import '../index.css'
 const SearchForm = (props) => {
     const show = props.wikis.length !== 0 ? true : false;
     return(
-        <div className={show ? "searchFormShow" : "searchForm"}>
+        <div id="searchForm" className={show? "searchFormShow" : null }>
             <form onSubmit={props.onSubmit}>
-                <div className={show? "inputContainerShow" : "inputContainer"}>
-                    <AngleRight className={show? "angleRightShow" : "angleRight"}/>
+                <div className={"inputContainer"}>            
                     <input 
                         className={show? "inputFormShow" : "inputForm"}
                         type="text" 
-                        placeholder="Search anything on wikipedia" 
+                        placeholder={show?  "Search..." : "Search anything on wikipedia"}
                         value={props.search} 
                         onChange={props.onChange}
                     />
                     <button type="submit" className={show? "searchButtonShow" : "searchButton"}><Search /></button>
-                    <button className={show? "randomButton" : "randomButton"}>
+                    <button className={show? "randomButtonShow" : "randomButton"}>
                         <a href="https://en.wikipedia.org/wiki/Special:Random" target='_blank'>
                             <Random />
                         </a>
